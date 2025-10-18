@@ -1,11 +1,14 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import BettingAnalyzer from './components/BettingAnalyzer'
-import CasinoAnalysis from './components/CasinoAnalysis'
-import MarketData from './components/MarketData'
 
 function App() {
   const [activeTab, setActiveTab] = useState('analyzer')
+
+  // Forçar a aba 'analyzer' a ser a única ativa, já que as outras foram removidas
+  useEffect(() => {
+    setActiveTab('analyzer');
+  }, []);
 
   return (
     <div className="app">
@@ -23,24 +26,10 @@ function App() {
         >
           📊 Analisador de Apostas
         </button>
-        <button 
-          className={`nav-btn ${activeTab === 'market' ? 'active' : ''}`}
-          onClick={() => setActiveTab('market')}
-        >
-          📈 Dados do Mercado
-        </button>
-        <button 
-          className={`nav-btn ${activeTab === 'casinos' ? 'active' : ''}`}
-          onClick={() => setActiveTab('casinos')}
-        >
-          🎰 Análise de Cassinos
-        </button>
       </nav>
 
       <main className="app-main">
         {activeTab === 'analyzer' && <BettingAnalyzer />}
-        {activeTab === 'market' && <MarketData />}
-        {activeTab === 'casinos' && <CasinoAnalysis />}
       </main>
 
       <footer className="app-footer">

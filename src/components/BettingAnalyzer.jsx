@@ -33,8 +33,15 @@ const BettingAnalyzer = () => {
         goalsAgainst: 22,
         avgGoals: 2.4
       },
-      prediction: 'Vitória do Flamengo (65%)',
-      predictionColor: '#4CAF50'
+        prediction: 'Vitória do Flamengo (65%)',
+        predictionColor: '#4CAF50',
+        detailedBets: [
+          { type: 'Total de Gols (Mais de 2.5)', odds: 1.85, probability: '54%', recommendation: 'Alta' },
+          { type: 'Ambos Marcam', odds: 1.70, probability: '59%', recommendation: 'Média' },
+          { type: 'Escanteios (Mais de 9.5)', odds: 1.90, probability: '53%', recommendation: 'Média' },
+          { type: 'Primeiro Gol (Flamengo)', odds: 1.95, probability: '51%', recommendation: 'Média' },
+          { type: 'Cartões Amarelos (Mais de 4.5)', odds: 2.10, probability: '48%', recommendation: 'Baixa' },
+        ]
     },
     {
       id: 2,
@@ -63,8 +70,15 @@ const BettingAnalyzer = () => {
         goalsAgainst: 18,
         avgGoals: 2.6
       },
-      prediction: 'Vitória do Real Madrid (62%)',
-      predictionColor: '#4CAF50'
+        prediction: 'Vitória do Real Madrid (62%)',
+        predictionColor: '#4CAF50',
+        detailedBets: [
+          { type: 'Total de Gols (Mais de 3.5)', odds: 2.10, probability: '48%', recommendation: 'Média' },
+          { type: 'Ambos Marcam', odds: 1.60, probability: '62%', recommendation: 'Alta' },
+          { type: 'Escanteios (Mais de 10.5)', odds: 2.00, probability: '50%', recommendation: 'Média' },
+          { type: 'Primeiro Gol (Real Madrid)', odds: 1.75, probability: '57%', recommendation: 'Alta' },
+          { type: 'Cartões Amarelos (Mais de 5.5)', odds: 2.20, probability: '45%', recommendation: 'Baixa' },
+        ]
     },
     {
       id: 3,
@@ -93,8 +107,15 @@ const BettingAnalyzer = () => {
         goalsAgainst: 25,
         avgGoals: 2.5
       },
-      prediction: 'Empate (52%)',
-      predictionColor: '#FF9800'
+        prediction: 'Empate (52%)',
+        predictionColor: '#FF9800',
+        detailedBets: [
+          { type: 'Total de Gols (Menos de 2.5)', odds: 2.05, probability: '49%', recommendation: 'Média' },
+          { type: 'Ambos Marcam', odds: 1.80, probability: '55%', recommendation: 'Média' },
+          { type: 'Escanteios (Mais de 8.5)', odds: 1.75, probability: '57%', recommendation: 'Alta' },
+          { type: 'Primeiro Gol (Liverpool)', odds: 2.10, probability: '48%', recommendation: 'Baixa' },
+          { type: 'Cartões Amarelos (Mais de 3.5)', odds: 1.90, probability: '53%', recommendation: 'Média' },
+        ]
     }
   ]
 
@@ -161,6 +182,22 @@ const BettingAnalyzer = () => {
                 {match.prediction}
               </div>
               <p className="prediction-note">Baseado em análise estatística e histórico de desempenho</p>
+            </div>
+          </div>
+
+          <div className="detailed-bets-section">
+            <h4>Opções de Apostas Detalhadas</h4>
+            <div className="detailed-bets-grid">
+              {match.detailedBets.map((bet, index) => (
+                <div key={index} className="detailed-bet-card">
+                  <div className="bet-type">{bet.type}</div>
+                  <div className="bet-odds">Odds: {bet.odds}</div>
+                  <div className="bet-prob">Probabilidade: {bet.probability}</div>
+                  <div className="bet-recommendation" style={{ color: bet.recommendation === 'Alta' ? '#4CAF50' : bet.recommendation === 'Média' ? '#FF9800' : '#F44336' }}>
+                    Recomendação: {bet.recommendation}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
