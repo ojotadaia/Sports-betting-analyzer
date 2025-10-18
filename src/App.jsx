@@ -14,8 +14,8 @@ function App() {
     <div className="app">
       <header className="app-header">
         <div className="header-content">
-          <h1>⚽ Analisador de Apostas Esportivas</h1>
-          <p>Análise profissional de apostas de futebol com dados reais do mercado</p>
+          <h1>⚽ Jota Sport Analyzer</h1>
+          <p>Sua plataforma inteligente para análises de futebol e apostas esportivas</p>
         </div>
       </header>
 
@@ -33,7 +33,7 @@ function App() {
       </main>
 
       <footer className="app-footer">
-        <p>© 2025 Analisador de Apostas Esportivas | Dados reais do mercado de apostas</p>
+        <p>© 2025 Jota Sport Analyzer | Análises inteligentes para suas apostas</p>
       </footer>
     </div>
   )

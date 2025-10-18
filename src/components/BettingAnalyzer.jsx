@@ -149,7 +149,7 @@ const BettingAnalyzer = () => {
   return (
     <div className="betting-analyzer">
       <div className="analyzer-container">
-        <h2>📊 Análise de Apostas de Futebol</h2>
+        <h2>⚽ Jota Sports Analyzer - Análise de Futebol</h2>
         
         <div className="match-selector">
           <label>Selecione uma partida:</label>

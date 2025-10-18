@@ -1,4 +1,5 @@
-/* General Styles */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,58 +7,60 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif; /* Mais moderno e esportivo */
-  background: linear-gradient(135deg, #1a2a6c 0%, #b21f1f 50%, #fdbb2d 100%); /* Gradiente vibrante */
+  font-family: "Montserrat", sans-serif;
+  background: #1a1a1a; /* Fundo preto */
   min-height: 100vh;
-  color: #f5f7fa; /* Texto claro para fundo escuro */
+  color: #e0e0e0; /* Texto claro para fundo escuro */
 }
 
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #1a2a6c; /* Fundo principal escuro */
+  background: #1a1a1a; /* Fundo principal preto */
 }
 
 /* Header */
 .app-header {
-  background: #0d1a2b; /* Cor escura para o cabeçalho */
+  background: #0d0d0d; /* Cor escura para o cabeçalho */
   color: white;
   padding: 40px 20px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .header-content h1 {
-  font-size: 3rem; /* Título maior */
-  margin-bottom: 10px;
-  font-weight: 800; /* Mais impacto */
-  text-transform: uppercase; /* Estilo esportivo */
-  letter-spacing: 2px;
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  color: #aaff00; /* Verde limão para o título */
 }
 
 .header-content p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   opacity: 0.9;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-/* Navigation */
+/* Navigation (simplificada, já que só há uma aba) */
 .app-nav {
   display: flex;
   justify-content: center;
-  gap: 15px;
   padding: 20px;
-  background: #0d1a2b; /* Cor escura para a navegação */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  flex-wrap: wrap;
+  background: #0d0d0d;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .nav-btn {
   padding: 14px 28px;
   border: none;
-  background: #fdbb2d; /* Botão amarelo vibrante */
-  color: #1a2a6c; /* Texto escuro */
-  border-radius: 30px; /* Botões arredondados */
+  background: #aaff00; /* Botão verde limão vibrante */
+  color: #1a1a1a; /* Texto escuro */
+  border-radius: 30px;
   cursor: pointer;
   font-size: 1.1rem;
   font-weight: 700;
@@ -67,61 +70,81 @@ body {
 }
 
 .nav-btn:hover {
-  background: #b21f1f; /* Efeito hover vermelho */
+  background: #88cc00; /* Verde limão mais escuro no hover */
   color: white;
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
 }
 
 .nav-btn.active {
-  background: #b21f1f; /* Botão ativo vermelho */
+  background: #88cc00; /* Botão ativo verde limão */
   color: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
   transform: translateY(-1px);
 }
 
 /* Main Content */
 .app-main {
   flex: 1;
-  padding: 50px 20px; /* Mais padding */
-  max-width: 1600px; /* Largura máxima maior */
+  padding: 50px 20px;
+  max-width: 1600px;
   margin: 0 auto;
   width: 100%;
 }
 
 /* Footer */
 .app-footer {
-  background: #0d1a2b;
-  color: #f5f7fa;
+  background: #0d0d0d;
+  color: #e0e0e0;
   text-align: center;
   padding: 25px;
-  margin-top: 50px; /* Mais espaço */
+  margin-top: 50px;
   font-size: 0.9rem;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.4);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .header-content h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
   }
 
   .header-content p {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .app-nav {
-    flex-direction: column;
-    gap: 10px;
+    padding: 15px;
   }
 
   .nav-btn {
-    width: 100%;
     padding: 12px 20px;
     font-size: 1rem;
   }
 
   .app-main {
     padding: 30px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .header-content p {
+    font-size: 0.9rem;
+  }
+
+  .nav-btn {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+
+  .app-main {
+    padding: 20px 10px;
   }
 }
 
