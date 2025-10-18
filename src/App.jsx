@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import BettingAnalyzer from './components/BettingAnalyzer'
+import JotaBetAnalyzerLogo from './assets/jota_bet_analyzer_logo.png'
 
 function App() {
   const [activeTab, setActiveTab] = useState('analyzer')
@@ -14,7 +15,10 @@ function App() {
     <div className="app">
       <header className="app-header">
         <div className="header-content">
-          <h1>⚽ Jota Sport Analyzer</h1>
+          <div class="header-logo-container">
+            <img src={JotaBetAnalyzerLogo} alt="Jota Bet Analyzer Logo" class="app-logo" />
+            <h1>Jota Bet Analyzer</h1>
+          </div>
           <p>Sua plataforma inteligente para análises de futebol e apostas esportivas</p>
         </div>
       </header>
@@ -33,7 +37,7 @@ function App() {
       </main>
 
       <footer className="app-footer">
-        <p>© 2025 Jota Sport Analyzer | Análises inteligentes para suas apostas</p>
+        <p>© 2025 Jota Bet Analyzer | Análises inteligentes para suas apostas</p>
       </footer>
     </div>
   )

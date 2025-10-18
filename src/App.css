@@ -29,10 +29,21 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-.header-content h1 {
-  font-size: 3.5rem;
+.header-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 15px;
-  font-weight: 900;
+}
+
+.app-logo {
+  height: 80px; /* Ajuste o tamanho da logo conforme necessário */
+  margin-right: 20px;
+}
+
+.header-content h1 {
+  font-size: 3.5rem; /* Título ainda maior */
+  font-weight: 900; /* Mais impacto */
   text-transform: uppercase;
   letter-spacing: 3px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -105,6 +116,17 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .header-logo-container {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .app-logo {
+    height: 60px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
   .header-content h1 {
     font-size: 2.5rem;
     letter-spacing: 2px;
@@ -129,6 +151,10 @@ body {
 }
 
 @media (max-width: 480px) {
+  .app-logo {
+    height: 50px;
+  }
+
   .header-content h1 {
     font-size: 2rem;
     letter-spacing: 1px;
