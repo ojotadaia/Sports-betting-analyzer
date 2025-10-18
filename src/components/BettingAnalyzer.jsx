@@ -37,10 +37,17 @@ const BettingAnalyzer = () => {
         predictionColor: '#4CAF50',
         detailedBets: [
           { type: 'Total de Gols (Mais de 2.5)', odds: 1.85, probability: '54%', recommendation: 'Alta' },
+          { type: 'Total de Gols (Menos de 2.5)', odds: 1.95, probability: '51%', recommendation: 'Média' },
           { type: 'Ambos Marcam', odds: 1.70, probability: '59%', recommendation: 'Média' },
+          { type: 'Empate Anula Aposta (Flamengo)', odds: 1.60, probability: '62%', recommendation: 'Alta' },
+          { type: 'Handicap Asiático (-1.5 Flamengo)', odds: 2.50, probability: '40%', recommendation: 'Baixa' },
           { type: 'Escanteios (Mais de 9.5)', odds: 1.90, probability: '53%', recommendation: 'Média' },
-          { type: 'Primeiro Gol (Flamengo)', odds: 1.95, probability: '51%', recommendation: 'Média' },
+          { type: 'Escanteios (Menos de 9.5)', odds: 1.80, probability: '56%', recommendation: 'Média' },
           { type: 'Cartões Amarelos (Mais de 4.5)', odds: 2.10, probability: '48%', recommendation: 'Baixa' },
+          { type: 'Cartões Amarelos (Menos de 4.5)', odds: 1.75, probability: '57%', recommendation: 'Média' },
+          { type: 'Primeiro Gol (Flamengo)', odds: 1.95, probability: '51%', recommendation: 'Média' },
+          { type: 'Resultado Exato (2-1 Flamengo)', odds: 8.00, probability: '12%', recommendation: 'Arriscada' },
+          { type: 'Marcador a Qualquer Momento (Gabigol)', odds: 2.20, probability: '45%', recommendation: 'Média' }
         ]
     },
     {
@@ -74,10 +81,17 @@ const BettingAnalyzer = () => {
         predictionColor: '#4CAF50',
         detailedBets: [
           { type: 'Total de Gols (Mais de 3.5)', odds: 2.10, probability: '48%', recommendation: 'Média' },
+          { type: 'Total de Gols (Menos de 3.5)', odds: 1.70, probability: '59%', recommendation: 'Média' },
           { type: 'Ambos Marcam', odds: 1.60, probability: '62%', recommendation: 'Alta' },
+          { type: 'Empate Anula Aposta (Real Madrid)', odds: 1.40, probability: '71%', recommendation: 'Alta' },
+          { type: 'Handicap Asiático (-1.0 Real Madrid)', odds: 2.00, probability: '50%', recommendation: 'Média' },
           { type: 'Escanteios (Mais de 10.5)', odds: 2.00, probability: '50%', recommendation: 'Média' },
-          { type: 'Primeiro Gol (Real Madrid)', odds: 1.75, probability: '57%', recommendation: 'Alta' },
+          { type: 'Escanteios (Menos de 10.5)', odds: 1.90, probability: '53%', recommendation: 'Média' },
           { type: 'Cartões Amarelos (Mais de 5.5)', odds: 2.20, probability: '45%', recommendation: 'Baixa' },
+          { type: 'Cartões Amarelos (Menos de 5.5)', odds: 1.85, probability: '54%', recommendation: 'Média' },
+          { type: 'Primeiro Gol (Real Madrid)', odds: 1.75, probability: '57%', recommendation: 'Alta' },
+          { type: 'Resultado Exato (3-1 Real Madrid)', odds: 9.00, probability: '11%', recommendation: 'Arriscada' },
+          { type: 'Marcador a Qualquer Momento (Vinicius Jr.)', odds: 1.90, probability: '53%', recommendation: 'Média' }
         ]
     },
     {
@@ -111,10 +125,17 @@ const BettingAnalyzer = () => {
         predictionColor: '#FF9800',
         detailedBets: [
           { type: 'Total de Gols (Menos de 2.5)', odds: 2.05, probability: '49%', recommendation: 'Média' },
+          { type: 'Total de Gols (Mais de 2.5)', odds: 1.75, probability: '57%', recommendation: 'Média' },
           { type: 'Ambos Marcam', odds: 1.80, probability: '55%', recommendation: 'Média' },
+          { type: 'Empate Anula Aposta (Manchester City)', odds: 1.50, probability: '67%', recommendation: 'Alta' },
+          { type: 'Handicap Asiático (+0.5 Liverpool)', odds: 1.80, probability: '56%', recommendation: 'Média' },
           { type: 'Escanteios (Mais de 8.5)', odds: 1.75, probability: '57%', recommendation: 'Alta' },
-          { type: 'Primeiro Gol (Liverpool)', odds: 2.10, probability: '48%', recommendation: 'Baixa' },
+          { type: 'Escanteios (Menos de 8.5)', odds: 2.00, probability: '50%', recommendation: 'Média' },
           { type: 'Cartões Amarelos (Mais de 3.5)', odds: 1.90, probability: '53%', recommendation: 'Média' },
+          { type: 'Cartões Amarelos (Menos de 3.5)', odds: 2.00, probability: '50%', recommendation: 'Média' },
+          { type: 'Primeiro Gol (Liverpool)', odds: 2.10, probability: '48%', recommendation: 'Baixa' },
+          { type: 'Resultado Exato (1-1 Empate)', odds: 6.50, probability: '15%', recommendation: 'Arriscada' },
+          { type: 'Marcador a Qualquer Momento (Haaland)', odds: 1.80, probability: '56%', recommendation: 'Alta' }
         ]
     }
   ]

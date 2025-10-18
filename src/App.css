@@ -1,3 +1,4 @@
+/* General Styles */
 * {
   margin: 0;
   padding: 0;
@@ -5,107 +6,122 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Montserrat', sans-serif; /* Mais moderno e esportivo */
+  background: linear-gradient(135deg, #1a2a6c 0%, #b21f1f 50%, #fdbb2d 100%); /* Gradiente vibrante */
   min-height: 100vh;
-  color: #333;
+  color: #f5f7fa; /* Texto claro para fundo escuro */
 }
 
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #f5f7fa;
+  background: #1a2a6c; /* Fundo principal escuro */
 }
 
+/* Header */
 .app-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #0d1a2b; /* Cor escura para o cabeçalho */
   color: white;
   padding: 40px 20px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .header-content h1 {
-  font-size: 2.5rem;
+  font-size: 3rem; /* Título maior */
   margin-bottom: 10px;
-  font-weight: 700;
+  font-weight: 800; /* Mais impacto */
+  text-transform: uppercase; /* Estilo esportivo */
+  letter-spacing: 2px;
 }
 
 .header-content p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   opacity: 0.9;
 }
 
+/* Navigation */
 .app-nav {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
   padding: 20px;
-  background: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background: #0d1a2b; /* Cor escura para a navegação */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   flex-wrap: wrap;
 }
 
 .nav-btn {
-  padding: 12px 24px;
-  border: 2px solid #667eea;
-  background: white;
-  color: #667eea;
-  border-radius: 8px;
+  padding: 14px 28px;
+  border: none;
+  background: #fdbb2d; /* Botão amarelo vibrante */
+  color: #1a2a6c; /* Texto escuro */
+  border-radius: 30px; /* Botões arredondados */
   cursor: pointer;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 700;
   transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .nav-btn:hover {
-  background: #f0f4ff;
-  transform: translateY(-2px);
+  background: #b21f1f; /* Efeito hover vermelho */
+  color: white;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 .nav-btn.active {
-  background: #667eea;
+  background: #b21f1f; /* Botão ativo vermelho */
   color: white;
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transform: translateY(-1px);
 }
 
+/* Main Content */
 .app-main {
   flex: 1;
-  padding: 40px 20px;
-  max-width: 1400px;
+  padding: 50px 20px; /* Mais padding */
+  max-width: 1600px; /* Largura máxima maior */
   margin: 0 auto;
   width: 100%;
 }
 
+/* Footer */
 .app-footer {
-  background: #2d3748;
-  color: white;
+  background: #0d1a2b;
+  color: #f5f7fa;
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+  padding: 25px;
+  margin-top: 50px; /* Mais espaço */
+  font-size: 0.9rem;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .header-content h1 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
 
   .header-content p {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   .app-nav {
     flex-direction: column;
+    gap: 10px;
   }
 
   .nav-btn {
     width: 100%;
+    padding: 12px 20px;
+    font-size: 1rem;
   }
 
   .app-main {
-    padding: 20px 10px;
+    padding: 30px 15px;
   }
 }
 
