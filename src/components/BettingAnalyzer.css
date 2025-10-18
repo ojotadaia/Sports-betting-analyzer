@@ -1,0 +1,243 @@
+.betting-analyzer {
+  width: 100%;
+}
+
+.analyzer-container {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.analyzer-container h2 {
+  color: #667eea;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+
+.match-selector {
+  margin-bottom: 25px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.match-selector label {
+  font-weight: 600;
+  color: #333;
+}
+
+.match-select {
+  padding: 10px 15px;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  color: #333;
+  cursor: pointer;
+  min-width: 300px;
+}
+
+.match-select:focus {
+  outline: none;
+  border-color: #764ba2;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.match-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.match-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.vs {
+  margin: 0 15px;
+  opacity: 0.8;
+}
+
+.league {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 8px;
+}
+
+.date {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+}
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.odds-section h4,
+.prediction-section h4,
+.stats-section h4 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.odds-cards {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.odds-card {
+  flex: 1;
+  min-width: 120px;
+  background: #f8f9fa;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.odds-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+  transform: translateY(-2px);
+}
+
+.odds-team {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.odds-value {
+  font-size: 1.8rem;
+  color: #667eea;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.odds-prob {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.prediction-box {
+  background: #f8f9fa;
+  border-left: 4px solid #4CAF50;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.prediction-text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.prediction-note {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.stat-item {
+  background: #f8f9fa;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.insights-section {
+  background: #f0f4ff;
+  border-left: 4px solid #667eea;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.insights-section h4 {
+  color: #667eea;
+  margin-bottom: 15px;
+}
+
+.insights-list {
+  list-style: none;
+  padding: 0;
+}
+
+.insights-list li {
+  padding: 10px 0;
+  color: #333;
+  border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+  font-size: 0.95rem;
+}
+
+.insights-list li:last-child {
+  border-bottom: none;
+}
+
+.insights-list li:before {
+  content: "✓ ";
+  color: #4CAF50;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .analyzer-container {
+    padding: 20px;
+  }
+
+  .match-selector {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .match-select {
+    min-width: 100%;
+  }
+
+  .odds-cards {
+    flex-direction: column;
+  }
+
+  .odds-card {
+    flex: 1 1 100%;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .match-info h3 {
+    font-size: 1.4rem;
+  }
+}
+
